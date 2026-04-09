@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contador</title>
+
+        <style>
+            body {
+                background-image: url("imagens/754787.png");
+            }
+            section {
+                color: #fff;
+                background-color: #666;
+                justify-content: center; 
+                align-items: center;     
+                height: auto;           
+                gap: 20px;
+                border-radius: 30px;
+                text-align: center;
+            }
+            img {
+                width: 50px;
+            }
+            p {
+                font-size: 60px;
+            }
+            h1 {
+                font-size: 60px;
+            }
+            button {
+                border-radius: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <section>
+            <h1>contador</h1>
+            <p>0</p>
+            <button onclick="diminuir()"><img src="imagens/tung sahur.png"></button>
+            <button onclick="aumentar()"><img src="imagens/tralalelro.jpg"></button>
+        </section>
+
+        <script>
+            let numero = 0
+
+            function diminuir() {
+                numero--
+                render()
+            }
+
+            function aumentar() {
+                numero++
+                render()
+            }
+            function render() {
+                const p =document.querySelector("p")
+                p.innerText = numero
+                render()
+            }
+        </script>
+
+    </body>
+</html>
