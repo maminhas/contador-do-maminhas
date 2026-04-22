@@ -4,30 +4,39 @@
         <title>contador</title>
 
         <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
             body {
                 background-image: url("imagens/754787.png");
+                min-height: 100vh;
+                display: grid;
+                place-items: center;
             }
             section {
                 color: #fff;
                 background-color: #666;
-                justify-content: center; 
-                align-items: center;     
-                height: auto;           
-                gap: 20px;
                 border-radius: 30px;
                 text-align: center;
-            }
-            img {
-                width: 50px;
+                padding: 20px;
             }
             p {
-                font-size: 60px;
+                font-size: 100px;
             }
             h1 {
                 font-size: 60px;
             }
             button {
                 border-radius: 1000px;
+                font-size: 30px;
+                width: 100px;
+            }
+            button.mais, button.menos {
+                font-size: 50px;
+            }
+            button.reset {
+                padding: 10px;
             }
         </style>
     </head>
@@ -36,9 +45,9 @@
         <section>
             <h1>Contador</h1>
             <p>0</p>
-            <button onclick="menos()">-</button>
-            <button onclick="reset()">reset</button>
-            <button onclick="mais()">+</button>
+            <button class="menos" onclick="menos()">-</button>
+            <button class="reset"onclick="reset()">reset</button>
+            <button class="mais" onclick="mais()">+</button>
         </section>
 
         <script>
