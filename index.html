@@ -34,28 +34,34 @@
     <body>
 
         <section>
-            <h1>contador</h1>
+            <h1>Contador</h1>
             <p>0</p>
-            <button onclick="diminuir()"><img src="imagens/tung sahur.png"></button>
-            <button onclick="aumentar()"><img src="imagens/tralalelro.jpg"></button>
+            <button onclick="menos()">-</button>
+            <button onclick="reset()">reset</button>
+            <button onclick="mais()">+</button>
         </section>
 
         <script>
             let numero = 0
 
-            function diminuir() {
+            function menos() {
                 numero--
                 render()
             }
 
-            function aumentar() {
+            function reset() {
+                numero = 0
+                render()
+            }
+            
+            function mais() {
                 numero++
                 render()
             }
+
             function render() {
                 const p =document.querySelector("p")
                 p.innerText = numero
-                render()
             }
         </script>
 
